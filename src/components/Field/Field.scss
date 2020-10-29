@@ -1,0 +1,42 @@
+div.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  > .field-label {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  > .error {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 20px;
+  }
+
+  > .field-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    border: 1px solid var(--grey);
+    padding: 10px 5px;
+    border-radius: 5px;
+
+    > input {
+      width: 100%;
+      border: none;
+    }
+
+    > .eye:hover {
+      cursor: pointer;
+    }
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}

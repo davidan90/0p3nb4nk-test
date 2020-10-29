@@ -1,0 +1,28 @@
+@import "~styles/scss/mixins";
+
+form.form {
+  @include step;
+
+  > .header {
+    color: var(--secondary);
+    margin-bottom: 20px;
+  }
+
+  > .fields {
+    > p span {
+      display: block;
+    }
+
+    > div {
+      &:first-of-type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        > * {
+          width: 250px;
+        }
+      }
+    }
+  }
+}

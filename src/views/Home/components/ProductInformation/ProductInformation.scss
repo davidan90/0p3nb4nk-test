@@ -1,0 +1,40 @@
+@import "~styles/scss/mixins";
+
+form.information {
+  @include step;
+
+  > .header {
+    color: var(--secondary);
+    margin-bottom: 20px;
+  }
+
+  > .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > figure {
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+
+      > p {
+        text-align: center;
+      }
+    }
+  }
+
+  > .conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+
+    .error {
+      color: var(--primary);
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-height: 20px;
+    }
+  }
+}

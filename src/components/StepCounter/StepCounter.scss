@@ -1,0 +1,46 @@
+ul.step-counter {
+  > li,
+  i {
+    font-size: 1.4rem;
+  }
+
+  > li {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    margin: 0 1rem;
+    display: inline-block;
+    color: var(--white);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.3rem;
+      left: -4rem;
+      width: 4rem;
+      height: 0.3rem;
+      background: var(--primary);
+      z-index: -1;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &.active {
+      background-color: var(--secondary);
+
+      & ~ li {
+        background-color: var(--grey-dark);
+
+        &::before {
+          background-color: var(--grey-dark);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "~styles/scss/mixins";
+
+div.feedback {
+  @include step;
+  min-height: 10rem;
+
+  > .header {
+    color: var(--secondary);
+    margin-bottom: 20px;
+
+    > h1 {
+      display: flex;
+      align-items: center;
+      > i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .links {
+    width: 100%;
+    padding: 0 15rem;
+
+    .finish {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
